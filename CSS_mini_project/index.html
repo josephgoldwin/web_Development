@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>College Trends in Chennai</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: aquamarine;
+    }
+
+    header h1 {
+      text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+      color: black;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    .colleges, .options, .note {
+      width: 100%;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .colleges {
+      
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 200px;
+      height: 100px;
+      background-color: white;
+      border-radius: 20px;
+      margin: 10px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+
+    .names {
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .colun {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .options {
+      
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    .options select {
+      width: 200px;
+      height: 50px;
+      border-radius: 20px;
+      background-color: white;
+      margin: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .note {
+      color:gray;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .note span {
+      flex: 1;
+    }
+
+    .note a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .widget-container {
+      width: 100%;
+      height: 450px;
+      background-color: white;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .split-td {
+      width: 50%;
+      vertical-align: top;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    td h1{
+        color:red;
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>College Trends in Chennai</h1>
+  </header>
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <div class="colleges">
+          <div class="box"><div class="circle"></div><div class="names"><a href="#SRM">SRM College</a> </div><div class="colun">:</div></div>
+          <div class="box"><div class="circle" style="background-color: red;"></div><div class="names"><a href="#Loyola">Loyola University</a></div><div class="colun">:</div></div>
+          <div class="box"><div class="circle" style="background-color: yellow;"></div><div class="names"><a href="#Anna">Anna University</a></div><div class="colun">:</div></div>
+          <div class="box"><div class="circle" style="background-color: green;"></div><div class="names"><a href="#Madras">Madras Christian</a></div><div class="colun">:</div></div>
+          <div class="box"><div class="circle" style="background-color: blueviolet;"></div><div class="names"><a href="#Sathyabama">Sathyabama University</a></div><div class="colun">:</div></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="options">
+          <!-- Dropdowns -->
+          <select>
+            <optgroup label="Country">
+              <option value="india">India</option>
+              <option value="newzeland">New Zealand</option>
+              <option value="sri lanka">Sri Lanka</option>
+              <option value="pakistan">Pakistan</option>
+            </optgroup>
+            <optgroup label="State">
+              <option value="tamil nadu" selected>Tamil Nadu</option>
+              <option value="kerala">Kerala</option>
+              <option value="andhra pradesh">Andhra Pradesh</option>
+              <option value="telangana">Telangana</option>
+            </optgroup>
+          </select>
+
+          <select>
+            <optgroup label="Select Timing">
+              <option>Past hour</option>
+              <option selected>Past day</option>
+              <option>Past 10 weeks</option>
+              <option>Past 9 months</option>
+              <option>Past 1 year</option>
+              <option>2024-present</option>
+            </optgroup>
+          </select>
+
+          <select>
+            <optgroup label="Select Me">
+              <option>All Categories</option>
+              <option>Arts & Entertainment</option>
+              <option>Auto & Vehicles</option>
+              <option>Beauty & Fitness</option>
+              <option>Books & Literature</option>
+              <option>Business & Industrial</option>
+            </optgroup>
+          </select>
+
+          <select>
+            <optgroup label="Search Me">
+              <option selected>Web Search</option>
+              <option>Image Search</option>
+              <option>Video Search</option>
+              <option>News Search</option>
+              <option>YouTube Search</option>
+              <option>Google Shopping</option>
+            </optgroup>
+          </select>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <div class="note">
+          <span><b>Note:</b> This comparison contains both Search terms and Topics, which are measured differently.</span>
+          <a href="https://support.google.com/trends/answer/4359550" target="_blank">LEARN MORE</a>
+        </div>
+      </td>
+    </tr>
+
+    <!-- Embed or Image Widgets -->
+    <tr><td colspan="2"><div class="widget-container">
+        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+    </div></td></tr>
+    <tr><td colspan="2"><div class="widget-container">
+        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+    </div></td></tr>
+   <tr id="SRM"><td><h1>SRM College</h1></td></tr>
+    <tr>
+      <td class="split-td"><div class="widget-container">
+        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("GEO_MAP_0", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+        </div></td>
+      <td class="split-td"><div class="widget-container">
+        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("RELATED_QUERIES_0", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+      </div></td>
+    </tr>
+<tr id="Loyola"><td><h1>Loyala University Chicago</h1></td></tr>
+    <tr>
+      <td class="split-td"><div class="widget-container">
+        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("GEO_MAP_1", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+
+      <td class="split-td"><div class="widget-container"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("RELATED_QUERIES_1", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+    </tr>
+<tr id="Anna"><td><h1>Anna University</h1></td></tr>
+     <tr>
+      <td class="split-td"><div class="widget-container"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("GEO_MAP_2", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+
+      <td class="split-td"><div class="widget-container"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("RELATED_QUERIES_2", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+    </tr>
+<tr id="Madras"><td><h1>Madras Christian College</h1></td></tr>
+     <tr>
+      <td class="split-td"><div class="widget-container"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("GEO_MAP_3", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+
+      <td class="split-td"><div class="widget-container"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("RELATED_QUERIES_3", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+    </tr>
+
+   <tr id="Sathyabama"><td><h1>Sathyabama University</h1></td></tr>  
+    
+    <tr>
+      <td class="split-td"><div class="widget-container"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("GEO_MAP_4", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+
+      <td class="split-td"><div class="widget-container"><script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
+<script type="text/javascript">
+trends.embed.renderExploreWidget("RELATED_QUERIES_4", {"comparisonItem":[{"keyword":"SRM College","geo":"IN-TN","time":"now 1-d"},{"keyword":"/g/11gxms4g7j","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/02451k","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/076hl8","geo":"IN-TN","time":"now 1-d"},{"keyword":"/m/071dcf","geo":"IN-TN","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&geo=IN-TN&q=SRM%20College,%2Fg%2F11gxms4g7j,%2Fm%2F02451k,%2Fm%2F076hl8,%2Fm%2F071dcf&hl=en-GB","guestPath":"https://trends.google.com:443/trends/embed/"});
+</script>
+
+</div></td>
+    </tr>
+
+    
+
+  </table>
+</body>
+</html>
+
