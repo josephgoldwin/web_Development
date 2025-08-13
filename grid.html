@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        header{
+            background-color:black;
+            color:white;
+            padding: 20px;
+            text-align: center;
+        }
+        main{
+            padding: 20px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-gap: 10px;
+        }
+        .item{
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section{
+            background-color: aqua;
+            display: grid;
+            justify-items:legacy;
+
+            height: 100vh;
+           
+            
+        }
+        .box{
+            background-color:red;
+            padding: 40px;
+            text-align: center;
+           
+        
+        }   
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grid Template</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="item">Box 1</div>
+            <div class="item">Box 2</div>
+            <div class="item">Box 3</div>
+            <div class="item">Box 4</div>
+            <div class="item">Box 5</div>
+            <div class="item">Box 6</div>
+            
+        </div>
+        <section>
+            <div class="section">
+            <div class="box">Boxes</div>
+            <div class="box">Boxes</div>
+            <div class="box">Boxes</div>
+            </div>
+        </section>
+        </main>
+</body>
+</html>
